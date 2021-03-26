@@ -15,7 +15,7 @@ public class ProductoAction extends ActionSupport{
 	private static final long serialVersionUID = -5194841497095129222L;
 	private Producto productoBean;
 		
-	private String codArtAEliminar;
+	private String codArtActual;
 		
 	List<Producto> lista;
 	Logger log = LogManager.getLogger(ProductoAction.class);
@@ -50,23 +50,24 @@ public class ProductoAction extends ActionSupport{
 		
 		ProductoDao proDao = new ProductoDaoImpl();
 		
-		proDao.delete(codArtAEliminar);
+		proDao.delete(codArtActual);
 		
-		log.info("El producto:" +codArtAEliminar+ " fue eliminado de la BD correctamente");
+		log.info("El producto:" +codArtActual+ " fue eliminado de la BD correctamente");
 		
 		return "insertadoOK";
 	}
+		
 	
-	public String getCodigo() {
-		return codArtAEliminar;
+	public String getCodArtActual() {
+		return codArtActual;
 	}
 
 
-	public void setCodigo(String codigo) {
-		this.codArtAEliminar = codigo;
+	public void setCodArtActual(String codArtActual) {
+		this.codArtActual = codArtActual;
 	}
 
-	
+
 	public Producto getProductoBean() {
 		return productoBean;
 	}

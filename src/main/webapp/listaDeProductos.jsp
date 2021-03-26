@@ -50,10 +50,13 @@ tr:hover {
 				<td><s:property value="nombreArt" /></td>
 				<!-- Buen momento para usar el tag de URL para pasar parametros -->
 				<s:url action="eliminarProducto" var="eliminarLink">
-					<s:param name="accion">eliminar</s:param>
-					<s:param name="codigo"> ${codArt} </s:param>
+					<s:param name="codArtActual"> ${codArt} </s:param>
 				</s:url>
-				<td><a href="editar">Editar</a> <a href="${eliminarLink}">Eliminar producto</a></td>
+				
+				<s:url action="actualizarProducto" var="actualizarLink">
+					<s:param name="codArtActual"> ${codArt} </s:param>
+				</s:url>
+				<td><a href="${actualizarLink}">Editar</a> <a href="${eliminarLink}">Eliminar producto</a></td>
 			</tr>
 		</s:iterator>
 	</table>
