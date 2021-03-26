@@ -8,41 +8,52 @@
 <title>Lista de productos</title>
 
 <style>
-
 table {
-  border-collapse: collapse;
-  width: 75%;
+	border-collapse: collapse;
+	width: 75%;
 }
 
-th{
+th {
 	font-weight: lighter;
- 	text-shadow: 0 1px 0 #38678f;
-  	color: white;
+	text-shadow: 0 1px 0 #38678f;
+	color: white;
 	background: steelblue;
 }
 
 th, td {
-  padding: 6px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+	padding: 6px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
 }
 
-tr:hover {background-color: #f5f5f5;}
+tr:hover {
+	background-color: #f5f5f5;
+}
 </style>
 </head>
 <body>
 	<h2>Productos</h2>
 
 	<a href="insertar.jsp">Insertar nuevo producto</a>
-	
+
 	<table>
-		<tr><th>Codigo</th> <th>Seccion</th> <th>Articulo</th> <th>Accion</th></tr>
+		<tr>
+			<th>Codigo</th>
+			<th>Seccion</th>
+			<th>Articulo</th>
+			<th>Accion</th>
+		</tr>
 		<s:iterator value="lista" var="prod">
 			<tr>
-			<td><s:property value="codArt" /></td>
-			<td><s:property value="seccion" /></td>
-			<td> <s:property value="nombreArt"/> </td>
-			<td><a href="editar">Editar</a> <a href="eliminar">Eliminar</a></td>
+				<td><s:property value="codArt" /></td>
+				<td><s:property value="seccion" /></td>
+				<td><s:property value="nombreArt" /></td>
+				<!-- Buen momento para usar el tag de URL para pasar parametros -->
+				<s:url action="eliminarProducto" var="eliminarLink">
+					<s:param name="accion">eliminar</s:param>
+					<s:param name="codigo"> ${codArt} </s:param>
+				</s:url>
+				<td><a href="editar">Editar</a> <a href="${eliminarLink}">Eliminar producto</a></td>
 			</tr>
 		</s:iterator>
 	</table>
