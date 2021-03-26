@@ -31,7 +31,7 @@
 			</tr>
 
 			<tr>
-				<td><s:textfield name="fechaAux" label="Fecha"></s:textfield></td>
+				<td><s:textfield name="productoBean.fecha" label="Fecha"></s:textfield></td>
 			</tr>
 
 			<tr>

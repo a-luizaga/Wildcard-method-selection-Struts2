@@ -41,8 +41,8 @@ public class ProductoAction extends ActionSupport{
 		
 //		ProductoDao proDao = new ProductoDaoImpl();
 		
-		productoBean.setFecha(new java.sql.Date(fechaAux.getTime()));
-		log.info(fechaAux+"\n");
+//		productoBean.setFecha(new java.sql.Date(fechaAux.getTime()));
+//		log.info(fechaAux+"\n");
 		log.info(productoBean);		
 		
 		

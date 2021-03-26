@@ -13,7 +13,7 @@ import com.opensymphony.xwork2.conversion.TypeConversionException;
 
 public class MiConversionDeFecha extends StrutsTypeConverter{
 	// WARNING not safe in multi-threaded environments
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 
     @SuppressWarnings("rawtypes")
 	@Override
@@ -23,7 +23,10 @@ public class MiConversionDeFecha extends StrutsTypeConverter{
         }
 
         try {
-            return DATE_FORMAT.parse(strings[0]);
+        	Date date = DATE_FORMAT.parse(strings[0]);
+        	
+        	java.sql.Date dateSQL = new java.sql.Date(date.getTime()); 
+            return dateSQL;
         } catch (ParseException e) {
             throw new TypeConversionException("Unable to convert given object to date: " + strings[0]);
         }
@@ -32,7 +35,7 @@ public class MiConversionDeFecha extends StrutsTypeConverter{
     @SuppressWarnings("rawtypes")
 	@Override
     public String convertToString(Map context, Object date) {
-        if (date != null && date instanceof Date) {         
+        if (date != null && date instanceof java.sql.Date) {         
             return DATE_FORMAT.format(date);
         } else {
             return null;
