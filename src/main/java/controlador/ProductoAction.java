@@ -56,6 +56,15 @@ public class ProductoAction extends ActionSupport{
 		
 		return "insertadoOK";
 	}
+	
+	public String actualizar() {
+		ProductoDao proDao = new ProductoDaoImpl();
+		
+		productoBean = proDao.read(codArtActual);
+		
+		
+		return "actualizarProd";
+	}
 		
 	
 	public String getCodArtActual() {

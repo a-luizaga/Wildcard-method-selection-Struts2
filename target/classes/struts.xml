@@ -19,7 +19,8 @@
 		<action name="*Producto" class="controlador.ProductoAction"  method="{1}">
 			<result name="success">/listaDeProductos.jsp</result>
 			<result name="input">/insertar.jsp</result>
-			<result name="insertadoOK" type="redirectAction">Producto</result>			
+			<result name="insertadoOK" type="redirectAction">Producto</result>		
+			<result name="actualizarProd">/updateAndSave.jsp</result>	
 			<allowed-methods>insert,actualizar,eliminar</allowed-methods>
 		</action>		
 
