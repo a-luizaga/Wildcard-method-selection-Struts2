@@ -30,7 +30,7 @@ public class ProductoDaoImpl implements ProductoDao {
 			// getConnection
 			miConexion = DriverManager.getConnection(url, username, password);
 
-			String query2 = "insert into producto (CodArt, Seccion, NombreArt, Precio, Fecha, Importado, Pais) values (?, ?, ?, ?, ?, ?, ?)";
+			String query2 = "insert into productos (CodArt, Seccion, NombreArt, Precio, Fecha, Importado, Pais) values (?, ?, ?, ?, ?, ?, ?)";
 			ps = miConexion.prepareStatement(query2);
 			ps.setString(1, producto.getCodArt());
 			ps.setString(2, producto.getSeccion());

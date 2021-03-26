@@ -39,14 +39,12 @@ public class ProductoAction extends ActionSupport{
 	
 	public String insert() {
 		
-//		ProductoDao proDao = new ProductoDaoImpl();
+		ProductoDao proDao = new ProductoDaoImpl();
 		
-//		productoBean.setFecha(new java.sql.Date(fechaAux.getTime()));
-//		log.info(fechaAux+"\n");
-		log.info(productoBean);		
+		proDao.insert(getProductoBean());		
 		
 		
-		return INPUT;
+		return "insertadoOK";
 	}
 	
 	public Date getFechaAux() {
