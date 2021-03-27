@@ -15,7 +15,7 @@
 			<result>/index.jsp</result>
 		</action>
 		
-		
+<!-- 		Uso del metodo comodin -->
 		<action name="*Producto" class="controlador.ProductoAction"  method="{1}">
 			<result name="success">/listaDeProductos.jsp</result>
 			<result name="input">/insertar.jsp</result>
