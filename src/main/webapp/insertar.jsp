@@ -1,14 +1,13 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Insertar nuevo producto</title>
 </head>
 <body>
-	<h2>Insertar nuevó producto</h2>
+	<h2>Insertar nuevÃ³ producto</h2>
 
 	<s:form action="insertProducto">
 
