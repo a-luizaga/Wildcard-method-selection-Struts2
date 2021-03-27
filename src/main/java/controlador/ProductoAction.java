@@ -52,7 +52,7 @@ public class ProductoAction extends ActionSupport{
 		
 		proDao.delete(codArtActual);
 		
-		log.info("El producto:" +productoBean.getCodArt()+ " fue eliminado de la BD correctamente");
+		log.info("El producto:" + codArtActual+ " fue eliminado de la BD correctamente");
 		
 		return "insertadoOK";
 	}
@@ -73,7 +73,7 @@ public class ProductoAction extends ActionSupport{
 		
 		prodDao.update(productoBean);
 		
-		log.info("Se actualizo el producto: "+ codArtActual+" correctamente.");
+		log.info("Se actualizo el producto: "+ productoBean.getCodArt()+" correctamente.");
 		
 		return "insertadoOK";
 	}
