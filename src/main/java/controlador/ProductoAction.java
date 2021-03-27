@@ -67,6 +67,17 @@ public class ProductoAction extends ActionSupport{
 	}
 		
 	
+	public String updateAndSave() {
+		
+		ProductoDao prodDao = new ProductoDaoImpl();
+		
+		prodDao.update(productoBean);
+		
+		log.info("Se actualizo el producto: "+ codArtActual+" correctamente.");
+		
+		return "insertadoOK";
+	}
+	
 	public String getCodArtActual() {
 		return codArtActual;
 	}
