@@ -75,7 +75,7 @@ public class ProductoAction extends ActionSupport{
 		
 		log.info("Se actualizo el producto: "+ productoBean.getCodArt()+" correctamente.");
 		
-		return "insertadoOK";
+		return SUCCESS;
 	}
 	
 	public String getCodArtActual() {

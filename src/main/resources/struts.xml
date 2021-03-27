@@ -21,7 +21,12 @@
 			<result name="input">/insertar.jsp</result>
 			<result name="insertadoOK" type="redirectAction">Producto</result>		
 			<result name="actualizarProd">/updateAndSave.jsp</result>	
-			<allowed-methods>insert,actualizar,eliminar, updateAndSave</allowed-methods>
+			<allowed-methods>insert,actualizar,eliminar</allowed-methods>
+		</action>
+		
+		<action name="updateAndSave" class="controlador.ProductoAction" method="updateAndSave">
+			<result name="success" type="redirectAction">Producto</result>
+			<result name="input">/updateAndSave.jsp</result>
 		</action>		
 
 

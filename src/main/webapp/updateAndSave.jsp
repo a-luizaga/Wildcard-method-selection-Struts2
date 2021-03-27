@@ -13,7 +13,7 @@
 		<s:property value="productoBean.codArt" />
 	</h2>
 
-	<s:form action="updateAndSaveProducto">
+	<s:form action="updateAndSave">
 
 		<table>
 
