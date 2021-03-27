@@ -1,1 +1,1 @@
-# Wildcard-method-selection-strtus2
+# Wildcard-method-selection-struts2
