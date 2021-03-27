@@ -50,6 +50,8 @@
 			</tr>
 
 		</table>
+		
+		<s:hidden name="productoBean.codArt"></s:hidden>
 
 	</s:form>
 </body>
