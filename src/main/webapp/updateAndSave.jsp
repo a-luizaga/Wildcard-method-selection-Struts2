@@ -43,7 +43,7 @@
 
 			<tr>
 
-				<td><s:submit value="Enviar"></s:submit></td>
+				<td><s:submit value="Actualizar"></s:submit></td>
 
 				<td><s:reset value="Clear"></s:reset></td>
 			</tr>
