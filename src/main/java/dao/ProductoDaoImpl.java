@@ -35,7 +35,7 @@ public class ProductoDaoImpl implements ProductoDao {
 			ps.setString(1, producto.getCodArt());
 			ps.setString(2, producto.getSeccion());
 			ps.setString(3, producto.getNombreArt());
-			ps.setDouble(4, producto.getPrecio());
+			ps.setFloat(4, producto.getPrecio());
 			ps.setDate(5, producto.getFecha());
 			ps.setString(6, producto.getImportado());
 			ps.setString(7, producto.getPais());
@@ -128,7 +128,7 @@ public class ProductoDaoImpl implements ProductoDao {
 
 			ps.setString(1, producto.getSeccion());
 			ps.setString(2, producto.getNombreArt());
-			ps.setDouble(3, producto.getPrecio());
+			ps.setFloat(3, producto.getPrecio());
 			ps.setDate(4, producto.getFecha());
 			ps.setString(5, producto.getImportado());
 			ps.setString(6, producto.getPais());
@@ -221,18 +221,19 @@ public class ProductoDaoImpl implements ProductoDao {
 
 			// Recorrer el ResultSet obtenido
 			String codArt, seccion, nombre, importado, pais;
-			double precio;
+			float precio;
 			Date fecha;
 			while (miRes.next()) {
 				codArt = miRes.getString(1);
 				seccion = miRes.getString(2);
 				nombre = miRes.getString(3);
-				precio = miRes.getDouble(4);
+				precio = miRes.getFloat(4);
 				fecha = miRes.getDate(5);
 				importado = miRes.getString(6);
 				pais = miRes.getString(7);
-
+				
 				lista.add(new Producto(codArt, seccion, nombre, precio, fecha, importado, pais));
+				
 			}
 
 			miRes.close();
